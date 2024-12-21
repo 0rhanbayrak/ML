@@ -2,14 +2,10 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
-from sklearn.metrics import confusion_matrix,accuracy_score
-import os
-
-# Çalışma dizinini ayarla
-os.chdir('C:\\Users\\Harun\\Desktop\\dataMiningMidtermProject')
+from sklearn.metrics import confusion_matrix, accuracy_score 
 
 # Veriyi yükle
-data = pd.read_csv('DataMiningDataSet.csv')
+data  = pd.read_csv('DataMiningDataSetContainsMeanInsteadOfNan.csv')
 
 # Özellikler ve hedef değişken
 X = data[['Cinsiyet', 'Yas', 'TahminiMaas']]
@@ -33,7 +29,6 @@ y_pred = model.predict(X_test)
 # Confusion Matrix
 conf_matrix = confusion_matrix(y_test, y_pred)
 
-
 # Accuracy Score
 accuracy = accuracy_score(y_test, y_pred)
 
@@ -41,6 +36,3 @@ accuracy = accuracy_score(y_test, y_pred)
 print(conf_matrix)
 
 print("Accuracy:", accuracy)
-
-
-

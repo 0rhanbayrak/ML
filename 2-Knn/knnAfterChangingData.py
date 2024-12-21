@@ -1,12 +1,8 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.svm import SVC
-from sklearn.metrics import confusion_matrix, accuracy_score 
-import os
-
-# Çalışma dizinini ayarla
-os.chdir('C:\\Users\\Harun\\Desktop\\dataMiningMidtermProject')
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import confusion_matrix,accuracy_score
 
 # Veriyi yükle
 data  = pd.read_csv('DataMiningDataSetContainsMeanInsteadOfNan.csv')
@@ -23,8 +19,8 @@ scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# SVM modelini oluştur ve eğit
-model = SVC(kernel='linear', random_state=42)
+# KNN modelini oluştur ve eğit
+model = KNeighborsClassifier(n_neighbors=7)
 model.fit(X_train, y_train)
 
 # Tahmin yap
@@ -40,3 +36,5 @@ accuracy = accuracy_score(y_test, y_pred)
 print(conf_matrix)
 
 print("Accuracy:", accuracy)
+
+

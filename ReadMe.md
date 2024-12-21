@@ -1,12 +1,11 @@
 # DİKKAT
-## .py dosyalarında yol uzantılarını kendi kaydettiğiniz yol uzantılarında çalıştırın düzenleyin . 
 ## her bir dosya içerisinde belli kütüphaneler vardır bu kütüphaneleri indirin .
 
 
 # Proje Açıklanması 
 
 - ## 1.Adım (Var olan veri üzerinde çalışmak)
-**Elimizde bulunan veri(DataMiningDataSet) üzerinde Sırasıyla knn *before isimli olan*  ve svm *before isimli olan* algoritmalarını çalıştırmak ve confisoun (karmaşıklık) matrixini bulmak.**
+**Elimizde bulunan veri(DataMiningDataSet) üzerinde Sırasıyla knn *before isimli olan*  ve svm *before isimli olan* algoritmalarını çalıştırmak ve confisuon (karmaşıklık) matrixini bulmak.**
 
 - ## 2.Adım (yer değiştir Nan ile)
 **Var olan veri setimiz üzerinde manipüle ederek random şekilde yaş sutunun içerisinde Nan değerlerle yer değiştirme Nan yazmak *replaceWithNanValuesRandomFiftyValues.py* dosyası çalıştırıldı ve *DataMiningDataSetContainsNan* oluşturuldu.**
@@ -15,7 +14,7 @@
 **Oluşturduğumuz *DataMiningDataSetContainsNan* dosyasını bir kez daha manipüle ederek Nan değerler yerine hesapladığımız ortalama (*Mean*) değer yazmak ve yeni son veri setimize ortaya çıkarmak *DataMiningDataSetContainsMeanInsteadOfNan* dosyasını oluşturduk.**
 
 - ## 4.Adım (Mean yazdığımız dosya üzerinde çalışmak)
-**Oluşturduğumuz *DataMiningDataSetContainsMeanInsteadOfNan* dosyasının üzerinde Sırasıyla knn *After isimli olan*  ve svm *After isimli olan*algoritmalarını çalıştırmak ve confisoun (karmaşıklık) matrixini bulmak .**
+**Oluşturduğumuz *DataMiningDataSetContainsMeanInsteadOfNan* dosyasının üzerinde Sırasıyla knn * isimAfterli olan*  ve svm *After isimli olan*algoritmalarını çalıştırmak ve confisoun (karmaşıklık) matrixini bulmak .**
 
 
 # ÇIKTILARIM

@@ -3,10 +3,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix,accuracy_score
-import os
-
-# Çalışma dizinini ayarla
-os.chdir('C:\\Users\\Harun\\Desktop\\dataMiningMidtermProject')
 
 # Veriyi yükle
 data = pd.read_csv('DataMiningDataSet.csv')
@@ -32,7 +28,6 @@ y_pred = model.predict(X_test)
 
 # Confusion Matrix
 conf_matrix = confusion_matrix(y_test, y_pred)
-
 
 # Accuracy Score
 accuracy = accuracy_score(y_test, y_pred)

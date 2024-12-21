@@ -1,16 +1,12 @@
 import pandas as pd
 import numpy as np
-import os
-
-# Çalışma dizinini ayarla
-os.chdir('C:\\Users\\Harun\\Desktop\\dataMiningMidtermProject')
 
 # CSV dosyasını oku
 df = pd.read_csv('DataMiningDataSetContainsNan.csv')
 
 mean_value = round(df['Yas'].mean())  #69803 ortalama değerimiz
 
-# 'IngilizceBilme' sütunundaki NaN değerleri ortalama ile doldurmak
+# 'Yas' sütunundaki NaN değerleri ortalama ile doldurmak
 df['Yas'] = df['Yas'].fillna(mean_value)
 
 # 'Yas' değerine göre 'KnowingEnglish' sütununu güncelle
